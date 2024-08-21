@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../assets/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  section {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px; /* Borda arredondada */
+  }
+  
+  h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #4e342e;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  details {
+    margin-bottom: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 700px; /* Garante que o 'details' ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    transition: height 0.5s ease; /* Suaviza a transição de altura */
+  }
+  
+  summary {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #4e342e;
+    cursor: pointer;
+    list-style: none;
+    padding: 15px 20px;
+    background-color: #ffecb3;
+    border: 2px solid #ffecb3;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Largura fixa para o summary */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+  
+  summary::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px; /* Espaço entre a bolinha e o texto */
+  }
+  
+  summary:hover {
+    background-color: #ffe082;
+    border-color: #ffe082;
+  }
+  
+  details p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #6d4c41;
+    padding: 15px 20px;
+    margin: 0;
+    background-color: #fff9c4;
+    border-top: 1px solid #ffe082;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    width: 100%; /* Garante que o parágrafo tenha a mesma largura */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+  
+  details[open] summary {
+    background-color: #ffe082;
+    border-color: #ffe082;
+  }
+  
+  details[open] p {
+    max-height: 1000px; /* Altura máxima para o conteúdo expandido */
+    opacity: 1;
+  }
+  
+  details:not([open]) p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  /* Adicione uma altura fixa para o estado fechado */
+  details {
+    height: 60px; /* Ajuste conforme necessário para o estado fechado */
+  }
+  
+  details[open] {
+    height: auto; /* Ajuste a altura para caber no conteúdo quando aberto */
+  }
+  
